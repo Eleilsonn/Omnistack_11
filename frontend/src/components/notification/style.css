@@ -1,0 +1,10 @@
+.notification{
+    z-index: 1000;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 5px;
+    width: 250px;
+    background-color: #e02041;
+    opacity: 1;    
+}

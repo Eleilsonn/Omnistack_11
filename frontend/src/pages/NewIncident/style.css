@@ -43,3 +43,17 @@
 .new-incident-container .content form textarea{
     margin-top: 8px;
 }
+
+@media only screen and (max-width:800px){
+    .new-incident-container .content{
+        display: block;
+        padding: 25px;
+        padding-top:160px;
+    }
+    .new-incident-container .content form{
+        max-width: 100%;
+    }
+    .new-incident-container .content section{
+        max-width: 100%;
+    }
+}

@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useHistory } from 'react-router-dom';
-import { FiPower, FiTrash2 } from 'react-icons/fi';
+import { useHistory } from 'react-router-dom';
+import { FiTrash2 } from 'react-icons/fi';
 import api from '../../services/api';
+
+import Menu from '../../components/menu'; 
 
 import './style.css';
 import logo from '../../assets/logo.svg';
@@ -35,7 +37,7 @@ export default function Profile() {
                 Authorization:ongId
             }
         }).then(()=>{
-            setIncidents(incidents.filter(incident => incident.id != id))
+            setIncidents(incidents.filter(incident => incident.id !== id))
         }).catch(()=>{
             alert('Erro ao deletar caso.');
         })
@@ -45,15 +47,14 @@ export default function Profile() {
         <div className="profile-container">
             <header>
                 <img src={logo} alt="Be The Hero" />
-                <span>Bem Vindo, {ongName}</span>
-
-                <Link className="button" to="/incidents/new">Cadastrar novo caso</Link>
-                <button type="button" onClick={handleLogout}><FiPower size={18} color="#e02041" /></button>
+                <span>Bem Vindo, {ongName}</span>                
+                                    
+                <Menu handleLogout={handleLogout}/>
             </header>
 
             <h1>Casos cadastrados</h1>
 
-            <ul>
+            <ul className="incidents-ul">
                 {incidents.map(incident => (
                     <li key={incident.id}>
                         <strong>CASO:</strong>

@@ -49,3 +49,21 @@
 .register-container .content form .input-group input + input{
     margin-left: 8px;
 }
+@media only screen and (max-width:800px){
+
+    .register-container .content {
+        display: grid;
+        padding: 25px;
+        padding-top: 200px;
+    }
+
+    .register-container .content section{
+        margin-bottom: 12px;
+        max-width: 100%;
+     }
+
+     .register-container .content form{
+         max-width: 100%;
+     }
+
+}

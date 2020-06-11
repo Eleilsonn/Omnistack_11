@@ -1,0 +1,100 @@
+#menu{
+    margin-left: auto;
+}
+#menu #menu-desktop {
+    display: flex;
+}
+#menu #menu-device{
+    display: none;
+}
+.menu-slide{    
+    display: none;
+    position: absolute;
+    z-index: 300;
+    height: 100%;
+    top: 0;
+    right: 0;
+    width: 100%;   
+}
+.menu-slide .menu-background{
+    background-color: black;
+    opacity: 0.3;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+.menu-slide .menu-itens{
+    width: 250px;
+    height: 100%;
+    margin-left: auto;
+    z-index: 302;
+    background-color:#e02041;
+    position: relative;
+}
+.menu-slide .menu-itens ul{
+    display: block;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 24px;
+    list-style: none;
+}
+.menu-slide .menu-itens ul li{
+    background: #e02041;   
+    position: relative;
+    color: #fff;
+    margin-left: 3px;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;   
+}
+
+.menu-slide .menu-itens ul li+li:hover{
+    border-left: 4px solid #fff;
+    background-color: #ff526f;
+}
+
+
+
+.menu-slide .menu-itens .menu-button{
+    height: 60px;
+    width: 60px;
+    border: 1px solid #e02041;
+    background: transparent;
+    margin-left: 0px;
+    transition: border-color 0.2s;
+}
+.menu-slide .menu-itens .menu-button:hover{
+    border-color: #999;
+}
+@media only screen and (max-width:800px){
+    #menu {
+        display: block;
+        margin-left: auto;
+    }
+    #menu #menu-device{
+        display: flex;        
+    }
+    #menu #menu-desktop{
+        display:none;
+    }
+    #menu #menu-container{
+        display: block;
+    }
+    .menu-slide .menu-itens ul li a{
+        text-decoration: none;
+        padding: 16px;
+        background-color: #e02041;
+        font-weight: bold;
+        width: 100%;
+        color: #fff;
+        display: block;
+        transition: background-color 0.2s;
+    }
+    .menu-slide .menu-itens ul li a span{
+        font-size: 16px;
+    }
+
+    .menu-slide .menu-itens ul li a:hover{
+        background-color: #ff526f;
+    }
+
+}
